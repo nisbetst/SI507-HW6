@@ -25,7 +25,7 @@ This experience is *not in any way* about becoming an expert JavaScript programm
 
 ### Specifically
 
-Below are a bunch of questions and indications of things to do. For each indication of something to do with code, there is also an accompanying question to answer or brief explanation to give. 
+Below are a bunch of questions and indications of things to do. For each indication of something to do with code, there is also an accompanying question to answer or brief explanation to give.
 
 **To complete and submit this assignment, you should:**
 
@@ -46,7 +46,7 @@ Below are a bunch of questions and indications of things to do. For each indicat
 
 * In answering questions, assume all of the questions include a *explain briefly* note -- you do NOT have to, and should not, write extended paragraphs. Be as concise as you can and explain in your own words. Don't worry about "whether it's enough" -- just worry about conveying your understanding so you can read it later, or even give it to someone else, and the answers will help/make sense.
 
-* It is not acceptable to copy and paste answers from the internet and submit them as your own. If you cite things, make sure you provide a citation, including to links. If you get information from a resource and rephrase it so you're basically explaining an idea, that's just fine for an explanatory purpose in this assignment, but you *must* cite any quotes or examples that aren't yours. 
+* It is not acceptable to copy and paste answers from the internet and submit them as your own. If you cite things, make sure you provide a citation, including to links. If you get information from a resource and rephrase it so you're basically explaining an idea, that's just fine for an explanatory purpose in this assignment, but you *must* cite any quotes or examples that aren't yours.
 
 * **For grading:** we are grading on...
 	* Following the instructions
@@ -57,13 +57,8 @@ Below are a bunch of questions and indications of things to do. For each indicat
 
 ### Names of people you have worked with on this assignment
 * List everyone's names and uniqnames who have worked on this assignment with you, **including your own name, but make sure YOUR name is first and bold**
-* Like this: 
-* **Jackie Cohen (jczetta)**
-* Yea-Ree Chang (cyearee)
-* Ruchi Ookalkar (ruchido)
-* Innocent Obi (innoobi)
-* Zhen Wang (alejwang)
-* etc.
+* Like this:
+* **Stephen Nisbet (nisbetst)**
 
 ## Questions & code instructions
 
@@ -79,27 +74,44 @@ Some JavaScript code
 
 * **What does a code comment look like in JavaScript? What character/s do you have to put before a comment?**
 
+	* A comment in JavaScript looks like:
+	```
+	// example comment
+	```
+	A comment needs to have to foward slashes i front of it. 
+ 
 * **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
+	* The JavaScript needs to be written inside of a ```<script>``` tag. Also a function must be called upon in the html body by some sort of action happening, such as: ```onload = displayInformation()```.
 
 * **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
+	* The first is ```alert()``` and the second is ```show()```
+	* You would want to use 'alert' when you want something to pop up at a user and really grab their attention. You would use show when you need to present something inline with the rest of the html. 	 	
 
 * **What code would have to comment out to get rid of the pop-up box when you load the page? (Related to the last question.) Do that in the code file, and then, add code so that a text box will appear that contains the current date and time! *HINT:* Look through the rest of the code first...**
+	* 	You would comment out the code that says ```alert('hello')``` 
 
 * **How can you put your own name at the top where it currently says "A name"? Explain very briefly how to do so, and replace `A name` in the web page with your own name.**
+	* In the function displayFuntion(), put your name whery it says "a name".
 
 * **What does the word `document` represent in this code? Explain briefly.**
+	* Document represents the html within the code. So when you write "docuement.queryselector" it selects all the items that you specify. 
 
-* **What is happening in line 12 ( 
+* **What is happening in line 12 (
 		`document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`
 )? Explain, briefly (<= 2 sentences).**
+	* First, the code is selecting all the items that have the id  #items. Then the code is assignign the length of all li items to that id.
 
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
+	* White because it is the default html background color.	 	
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
+	* Because under ```<style>``` paragraph tags are styled with a grey background with a white border. that way.   
 
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
+	* I made a new function in the JavaScript called 'copyFunction2()' and then this was called upon 'oncopy' on McGill. This function then put the string "O Canada" in the div #cheer. 
 
 * **In the original code, when you click the button that says `Wow`, you see a text box! Wow. Explain briefly in your own words why the following code causes that to happen:**
+	* because in the html, you are calling for the function to run when the button is clicked. The function then prompts the alert to displayed.  
 
 ```js
 function handleClick(){
@@ -112,10 +124,8 @@ function handleClick(){
 <button onclick=handleClick() id="wow-button">Wow</button>
 ```
 
-
-
 * **Knowing what you learned from the previous question, add code/markup to the `jsPracticeLab.html` file *so that* there is a button with the text `Spring Equinox 2019` on it somewhere on the page, and when that button is clicked, a text box containing the text `March 20, 2019` appears. (There's no function -- that I am aware of -- to automatically get this info, you've got to type it yourself.)**
-
+	
 
 
 ### The next few questions address the `jquerylib_submit_example.html` file.
@@ -123,14 +133,19 @@ function handleClick(){
 * **Check out the file `jquerylib_submit_example.html`. This is an example of code that uses a package called `jQuery` (and this will need you to have an internet connection to run it properly, although the other file does not). Check out resources above for more on jQuery!**
 
 * **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
+	* Because in the style portion of the code the class .good has been assigned blue and the class .error has been assigned red.
 
 * **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
+	* This is helping check to see that the string only contains letters, either uppercase or lowercase.
 
 * **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
+	* Conditional statements don't rely on colons and and indenting in JavaScript. Rather the statement goes inside of paranthesis and the thing that should happen inside of brackets.
 
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
+	* It refers to the rate at which the text fades out of view.  
 
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
+	* I believe what is happening is that .ready is saying don't execute until the page is safe to manipulate or loaded. (https://api.jquery.com/ready/) 
 
 ```js
 $(document).ready(function(){
